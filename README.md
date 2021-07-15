@@ -12,7 +12,7 @@ Hasher can be used for almost anything, so I will list examples of what Hasher d
 
 - Hasher **is**:
 	- A random value generator
-	- A sha256 system test
+	- A sha256/sha512/sha1/md5 system test
 	- A roleplaying tool
 - Hasher **isn't**:
 	- A password generator
@@ -20,7 +20,14 @@ Hasher can be used for almost anything, so I will list examples of what Hasher d
 	- A cryptocurrency miner
 
 ## How does Hasher work?
-Hasher takes 10 random numbers from *0* to *999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999*, and then encodes them to a string that Python's "hashlib" can understand. Hasher then takes the sha256 hash, re-encodes it, and passes it through another sha256 algorithm.
+Hasher takes 10 random numbers from *0* to *999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999*, and then encodes them to a string that Python's "hashlib" can understand. Hasher then takes the hash, re-encodes it, and passes it through another equal algorithm.
+
+### What algorithms can I use?
+For the moment, we've got 4 algorithms! Type:
+- "md5" for MD5
+- "sha1" for, well, SHA1
+- "sha256" for SHA256
+- "sha512" for, you guessed it, SHA512.
 
 ## What can I do with Hasher's source code?
 Hasher uses the GNU-GPLv3 license, which essentially means that you can do anything with my code except making it closed-source.
