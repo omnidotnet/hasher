@@ -2,7 +2,7 @@ import random
 import hashlib
 import time
 
-print("---------- Hasher ALPHA - 1.1 ----------")
+print("---------- Hasher ALPHA - 1.2 ----------")
 print("----- The intuitive Hash Generator -----\n")
 
 hash_type = input("Which type of hashing algorithm do you want to use? ")
@@ -298,6 +298,8 @@ elif hash_select_str == "md5":
     result9 = hashlib.md5(encoded_twice9)
     result10 = hashlib.md5(encoded_twice10)
 
+    file_write = "Hash 1:", result1, ", Hash 2:", result2, ", Hash 3:", result3, ", Hash 4:", result4, ", Hash 5:", result5, ", Hash 6:", result6, ", Hash 7:", result7, ", Hash 8:", result8, ", Hash 9:", result9, ", Hash 10:", result10
+
     print("\nHash 1:", result1)
     print("Hash 2:", result2)
     print("Hash 3:", result3)
@@ -308,7 +310,16 @@ elif hash_select_str == "md5":
     print("Hash 8:", result8)
     print("Hash 9:", result9)
     print("Hash 10:", result10, "\n")
-
+    save_confirmation = input("Do you want to save the results? (Y)es or (N)o. ")
+    if save_confirmation is "Y":
+        f = open("HashSave_Hasher.txt", "w")
+        f.write(str(file_write))
+        f.close()
+        print("Saved (in HashSave_Hasher.txt). \n")
+    elif save_confirmation is "N":
+        print("Not saved. \n")
+    else:
+        print("Please input a valid value. \n")
 else:
     print("Please choose a valid algorithm.\n")
 
